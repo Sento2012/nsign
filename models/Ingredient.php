@@ -41,6 +41,14 @@ class Ingredient extends ActiveRecord
         ];
     }
 
+    /**
+     * Search all ingredient
+     *
+     * @param string $keyField - array key
+     * @param string $valueField - array value
+     * @param bool $asArray - is array
+     * @return array
+     */
     public static function listAll($keyField = 'id', $valueField = 'name', $asArray = true)
     {
         $query = static::find();
